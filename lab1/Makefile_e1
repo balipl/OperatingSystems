@@ -1,0 +1,12 @@
+all: ex1open clean
+ex1open: ex1open.o
+		gcc -o ex1open ex1open.o
+ex1open.o: ex1open.c
+		gcc -c -o ex1open.o ex1open.c
+clean:
+		rm -f ex1open.o		
+		rm -f *~
+		rm -f *.bak
+		
+
+.PHONY: clean
